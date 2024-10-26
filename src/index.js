@@ -7,7 +7,7 @@ const getViewContent = require('./routing/view');
 const { readJsonFile, updateAndWriteJsonFile } = require('./routing/manifest');
 const { promptUser, promptUserWithArrowKeys } = require('./promptsHelper');
 const { setupFragment } = require('./fragment');
-const { ui5FormValidationTS, ui5FormValidationJS } = require('ui5-helper/src/validation/formValidation');
+const { ui5FormValidationTS, ui5FormValidationJS } = require('./validation/formValidation');
 
 const redText = (text) => `\x1b[31m${text}\x1b[0m`;
 const greenText = (text) => `\x1b[32m${text}\x1b[0m`;
@@ -32,33 +32,7 @@ async function getManifestJson(manifestPath) {
         throw error; // Throw the error to be caught by the caller
     }
 }
-async function createFormValidationFile() {
-    const validationDirPath = path.join(basePath, 'webapp', 'ui5Validation');
-    const validationFilePath = path.join(validationDirPath, 'formvalidation.js');
-    console.log(validationDirPath)
-    // Create the directory if it doesn't exist
-    if (!fs.existsSync(validationDirPath)) {
-        fs.mkdirSync(validationDirPath, { recursive: true });
-        console.log(greenText(`Validation directory created at: ${validationDirPath}`));
-    }
 
-    // Check if the formvalidation.js file already exists
-    if (fs.existsSync(validationFilePath)) {
-        console.error(redText(`File 'formvalidation.js' already exists in ${validationDirPath}`));
-    } else {
-        // Create the content for formvalidation.js
-        const validationContent = `// Form Validation Logic\n\n` +
-            `function validateForm(data) {\n` +
-            `    // Implement your validation logic here\n` +
-            `    console.log('Validating form data:', data);\n` +
-            `}\n\n` +
-            `module.exports = validateForm;`;
-
-        // Write the content to formvalidation.js
-        fs.writeFileSync(validationFilePath, validationContent);
-        console.log(greenText(`File 'formvalidation.js' added successfully at: ${validationFilePath}`));
-    }
-}
 async function main() {
     const options = ['Create Route', 'Fragment Setup', 'form validation'];
     let message = "Please select an option:"
@@ -79,7 +53,6 @@ async function main() {
             break;
     }
 }
-
 async function createRoute() {
     const fileName = await promptUser('View & Controller Name?', 'helper');
     if (!fileName) {
@@ -145,7 +118,7 @@ function listFiles(directoryPath) {
         });
     });
 }
-
+// Mohammad Sohail sohail9744: Form validation start from here
 async function createFormValidationFile() {
 
     const useTypeScript = await promptUser('Do you want to use TypeScript? (y/n): ', 'y') === 'y';

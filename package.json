@@ -16,9 +16,19 @@
     "BAS",
     "ui5-router",
     "sap",
-    "UI5 Fragment Setup",
-    "UI5 Fragment generator",
-    "routing generator UI5"
+    "ui5 validation",
+    "sapui5 form validation",
+    "sap fiori validation",
+    "sapui5 input validation",
+    "sapui5 field validation",
+    "ui5 validation example",
+    "sapui5 error handling",
+    "sapui5 required fields",
+    "ui5 form error handling",
+    "sapui5 custom validation",
+    "ui5 form validation library",
+    "sapui5 regex validation",
+    "fiori validation rules"
   ],
   "repository": {
     "type": "git",
