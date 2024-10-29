@@ -1,7 +1,8 @@
 
 # SAPUI5 Fiori Form Validation Handler
 
-# [Watch the Youtube Video](https://www.youtube.com/watch?v=3VrgCTgC3Xc)
+# [Validation Handler - Youtube Video](https://www.youtube.com/watch?v=3VrgCTgC3Xc)
+# [Auto Generate Routing + Fragment Setup - Youtube Video](https://www.youtube.com/watch?v=3VrgCTgC3Xc)
 
 The **SAPUI5 Fiori Form Validation Handler** is a reusable component designed to streamline form validation in SAPUI5 Fiori applications. This handler allows developers to define customizable validation rules for form fields, ensuring data integrity and enhancing the user experience.
 
