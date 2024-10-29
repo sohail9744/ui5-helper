@@ -90,7 +90,7 @@ export default class View1 extends Controller {
     }
 }
 
-
+```
 ## How to bind with Form an example
 
 ```bash
