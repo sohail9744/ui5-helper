@@ -1,4 +1,4 @@
-# [Form Validation Handler - Youtube Video](https://www.youtube.com/watch?v=3VrgCTgC3Xc)
+# [Click here to see the real time video - Youtube Video](https://www.youtube.com/watch?v=3VrgCTgC3Xc)
 # [Auto Generate Routing + Fragment Setup - Youtube Video](https://youtu.be/aaQPJcG7MwY)
 
 
@@ -51,7 +51,7 @@ Validation directory created at: /home/user/projects/formtesting/webapp/validati
 File 'formvalidation.js' added successfully at: /home/user/projects/formtesting/webapp/validation/formValidation.ts
 
 ```
-## How to use in Controller?
+## How to use Form validation function in your ui5 app?
 
 ```bash
 import { ui5FormValidation } from "formtesting/validation/formValidation";
@@ -91,7 +91,7 @@ export default class View1 extends Controller {
 }
 
 ```
-## How to bind with Form an example
+## How to bind with Form in view an example
 
 ```bash
 
@@ -202,3 +202,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Built with ❤️ by [Sohail Khan](https://www.linkedin.com/in/sohail9744/)
 - Maintainer: [Sohail Khan](https://www.linkedin.com/in/sohail9744/) + #Community
 - Inspired by the need to simplify SAPUI5 project setup
+
